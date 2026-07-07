@@ -8,13 +8,9 @@ ytdl_format_options = {
     "extract_flat": False,
 }
 
-ffmpeg_options = {
-    "options": "-vn"
-}
-
 ytdl = YoutubeDL(ytdl_format_options)
 
-info = ytdl.extract_info("https://www.youtube.com/watch?v=81dezsUC3nc&list=PLHS75benlvhMAweEPUaol6c_SK9htxbo-", download=False)
+info = ytdl.extract_info("https://www.youtube.com/watch?v=81dezsUC3nc&list=RDMM&start_radio=1&rv=BcqPl8A9cM0", download=False)
 
 with open("info.txt", "w", encoding="utf-8") as f:
     json.dump(info, f, indent=4, ensure_ascii=False)

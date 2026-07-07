@@ -26,7 +26,7 @@ class Mikki(commands.Bot):
     async def setup_hook(self):
         await self.load_cogs()
         synced_commands = await self.tree.sync()
-        print(f"Synced {len(synced_commands)} commands")
+        print(f"Synced {len(synced_commands)} commands on startup")
 
 def main():
     bot = Mikki()
